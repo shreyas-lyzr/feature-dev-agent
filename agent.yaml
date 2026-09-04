@@ -1,0 +1,18 @@
+spec_version: "0.1.0"
+name: feature-dev-agent
+version: "0.1.0"
+description: Software engineering agent that turns a feature request into an approved plan (acceptance criteria, files to change), then builds it and opens a PR. Driven via gitagent / gitclaw.
+author: shreyas-lyzr
+
+model:
+  preferred: anthropic:claude-opus-5
+  fallback:
+    - anthropic:claude-sonnet-5
+
+runtime:
+  max_turns: 60
+
+tags:
+  - software-engineering
+  - feature-development
+  - pull-requests
